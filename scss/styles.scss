@@ -8,72 +8,107 @@ $nav-bar-color: #f8f8f8;
 
 * {
   box-sizing: border-box;
-  word-wrap: break-word;
 }
 body {
   margin: 0 auto;
   font-family: "Lato", sans-serif;
   background-color: red;
+  font-size: 16px;
   // ^^ change to bg-color
 }
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
-
-a {
-  text-transform: uppercase;
-  font-size: 12px;
-  color: $primary-text-color;
-  text-decoration: none;
-  font-weight: 800;
+h2 {
+  padding-top: 0;
+}
+ul {
+  list-style: none;
+  display: flex;
 }
 
 // nav bar
-
-.wrapper {
-  width: 100%;
-  background-color: $nav-bar-color;
+header {
   height: 60px;
-  border-bottom: 1px solid $primary-text-color;
-}
-.flex-nav {
-}
-.flex-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  background-color: $nav-bar-color;
+  justify-content: center;
   align-items: center;
 }
+.nav {
+  width: 80%;
+  display: flex;
 
-.flex-nav li {
-  flex: 4;
+  font-size: 14px;
 }
 
-.flex-nav .social {
-  flex: 1;
+.left-nav {
+  justify-content: flex-start;
 }
 
-// @media all and (max-width: 1000px) {
-//   .flex-nav ul {
-//     flex-wrap: wrap;
-//   }
+.right-nav {
+  position: absolute;
+  right: 10vw;
+}
+.right-nav a {
+  justify-content: flex-end;
+  padding: 5px;
+}
 
-//   .flex-nav li {
-//     flex: 1 1 50%;
-//   }
-//   .flex-nav .social {
-//     flex: 1 1 20%;
-//   }
-// }
-// @media all and (max-width: 500px) {
-//   .flex-nav li {
-//     flex-basis: 100%;
-//   }
-// }
+// main
+
+.container {
+  display: inline-block;
+  margin-left: 10.5%;
+  margin-top: 60px;
+}
+.content {
+  display: block;
+  width: 58%;
+}
+
+@media (min-width: 600px) {
+  #article-img {
+    flex-direction: column;
+    // width: 750px;
+    // height: 474px;
+    width: 100%;
+  }
+}
+@media (max-width: 599) {
+  #article-img {
+    flex-direction: column;
+    width: 50%;
+  }
+}
+
+#blurb {
+  height: 390px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  padding: 20px;
+  position: relative;
+}
+
+#article-footer {
+  border-top: $icon-text-color solid 1px;
+  height: 60px;
+  background-color: white;
+}
+
+.icons-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icons-footer a {
+  padding: 11px;
+}
