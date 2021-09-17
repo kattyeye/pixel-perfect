@@ -60,15 +60,20 @@ header {
   padding: 5px;
 }
 
+main {
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+}
+
 .container {
   display: flex;
-  margin-left: 10.5%;
   margin-top: 55px;
   width: 100%;
 }
 
 .content {
-  width: 52%;
+  width: 85%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -131,14 +136,12 @@ header {
 aside {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   width: 30%;
 }
 
 .contentright {
   flex-direction: column;
   justify-content: center;
-  width: 30%;
   align-items: center;
   display: flex;
 }
