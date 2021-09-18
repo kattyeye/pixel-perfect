@@ -32,9 +32,20 @@ ul {
   list-style: none;
   display: flex;
 }
+h2 {
+  font-weight: 500;
+  color: $primary-text-color;
+  margin: 14px 0px 16px 0px;
+  letter-spacing: 0.02em;
+}
+p {
+  color: $primary-text-color;
+}
 h6 {
-  margin-bottom: 0px;
-  padding-top: 8px;
+  margin: 20px 0px 0px;
+  color: $accent-text-color;
+  letter-spacing: 0.1em;
+  font-weight: 600;
 }
 
 // nav bar
@@ -66,54 +77,41 @@ header {
 }
 
 // main
+
 main {
-  margin-right: 10%;
-  margin-left: 10%;
   display: flex;
+  max-width: 1152px;
+  margin: 0 auto;
+
+  .container {
+    display: flex;
+    margin-top: 52px;
+    margin-bottom: 60px;
+    margin-left: 6px;
+    //   padding-right: 20px;
+    //   padding-left: 5px;
+  }
 }
-.container {
-  display: flex;
-  margin-top: 50px;
-  flex: 2;
-  margin-bottom: 60px;
-  padding-right: 20px;
-  padding-left: 5px;
-}
+
 .content {
   width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid $icon-text-color;
-  max-height: 884px;
 }
 
 // @media (min-width: 600px) {
-//   #article-img {
-//     flex-direction: column;
-//     // width: 750px;
-//     // height: 474px;
-//     width: 100%;
-//   }
-// }
-// @media (max-width: 599px) {
-//   #article-img {
-//     flex-direction: column;
-//     width: 50%;
-//   }
-// }
 
 .info {
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: 0;
+  line-height: 1.6em;
+  margin-top: 8px;
 }
 
 .cont-button {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 11px 18px 12px 18px;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -124,8 +122,13 @@ main {
   border: 1px solid $accent-text-color;
 }
 
+.cont-button:hover {
+  color: blue;
+  border-color: blue;
+}
+
 .bar {
-  width: 90%;
+  width: 100%;
   background-color: $icon-text-color;
   height: 1px;
 }
@@ -136,8 +139,6 @@ main {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding-left: 5%;
-  height: 85px;
   align-items: flex-start;
   margin-top: 10px;
   padding-top: 0;
@@ -145,65 +146,131 @@ main {
 
 span {
   padding-top: 10px;
+  font-style: italic;
+  color: $icon-text-color;
 }
 
 .icons-footer {
   display: flex;
   justify-content: flex-end;
-  margin-right: 32px;
   align-items: flex-start;
+  padding: 0;
+  margin-top: 12px;
 }
+
 .icons-footer a {
   font-size: 16px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 16px;
+  margin-bottom: 5px;
+
+  color: $icon-text-color;
+}
+
+.iconscircles {
+  font-size: 12px;
+  padding: 0;
+}
+.iconscircles i {
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  border: 1px solid $icon-text-color;
+  color: $icon-text-color;
+  border-radius: 50%;
+}
+.iconscircles a {
+  padding: 3px;
 }
 aside {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin-top: 55px;
+  margin-top: 52px;
+  width: 360px;
+  margin-left: 30px;
 }
 .contentright {
   flex-direction: column;
   align-items: center;
   display: flex;
-  padding: 5%;
   background-color: white;
-  margin-left: 12px;
-  margin-right: 5px;
+
   position: relative;
+  //   padding-top: ;
 }
 
-.img {
+.blog-hero-section {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  width: 100%;
+  height: 473px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+
+  #hero-img {
+    flex-direction: column;
+    //   width: 750px;
+    height: 100%;
+    width: auto;
+  }
 }
 
 .text {
-  margin-top: 25px;
+  //   margin-top: 25px;
+  padding: 26px 39px 30px 39px;
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
+  border: 1px solid $icon-text-color;
+  border-top: 0px;
+  width: 100%;
 }
-
-.bg-img {
+.bg-img-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 183px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px auto;
   position: absolute;
   top: 0;
-  object-fit: contain;
+}
+.bg-img {
+  height: 100%;
+  width: auto;
+  flex-direction: column;
 }
 
-.greece {
-  height: 180px;
-  width: 180px;
-  display: block;
-  border: 5px solid white;
+.profile-pic-section {
+  height: 182px;
+  width: 182px;
+  overflow: hidden;
+  margin-top: 99px;
+  border: 6px solid white;
   border-radius: 50%;
-  position: relative;
-  margin-top: 70px;
+  z-index: 20;
+}
+
+.profile-pic {
+  height: 100%;
+  width: auto;
+  display: block;
 }
 .george {
+  margin-top: 12px;
   margin-bottom: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+.monkeyinfo {
+  font-size: 14px;
+  line-height: 1.8em;
+  padding-top: 5px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 750px;
+  }
 }
