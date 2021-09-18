@@ -367,4 +367,128 @@ h4 {
   margin-bottom: 20px;
 }
 
+.contentright3 {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-bottom: 40px;
+  position: relative;
+  border: 1px solid #eaeaea;
+}
+
+.latestposts {
+  padding: 17px 29px 0px 29px;
+  text-align: left;
+}
+
+.latest-post-name {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  padding-left: 44px;
+}
+
+.latest-post-name h2 {
+  margin-bottom: 0;
+}
+
+.latestpostcontainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: 14px;
+}
+
+.latest-post-img-sect {
+  width: 103px;
+  height: 76px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.latest-post-img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.metalate {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.metalate h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #444;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  padding-top: 3px;
+}
+
+.metalate span {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 4px;
+}
+
+.latestpostcontainer-last {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  margin-top: 14px;
+}
+
+.contentright4 {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-bottom: 40px;
+  position: relative;
+  border: 1px solid #eaeaea;
+}
+
+.insta-post-name {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.instagramposts {
+  padding: 20px 30px;
+}
+
+.instapostcontainer {
+  margin-top: 12px;
+  display: flex;
+}
+
+.insta-post-img-sect {
+  height: 145px;
+  width: 145px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.insta-post-img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
 /*# sourceMappingURL=styles.css.map */
