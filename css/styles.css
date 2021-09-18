@@ -293,5 +293,78 @@ aside {
     width: 750px;
   }
 }
+.contentright2 {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  background-color: white;
+  margin-bottom: 40px;
+  position: relative;
+  border: 1px solid #eaeaea;
+}
+
+.popularposts {
+  padding: 20px 15px;
+  text-align: left;
+}
+
+.pop-post-name {
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.pop-post-img-sect {
+  height: 200px;
+  width: 300px;
+  padding-bottom: 0;
+}
+
+.pop-post-img {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  color: #444444;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.metapopular {
+  color: #aaaaaa;
+}
+
+.metadate {
+  font-size: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.morepopularposts {
+  display: flex;
+  flex-direction: column;
+}
+
+.threepop {
+  margin-top: 20px;
+}
+
+.metadatethree {
+  font-size: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
 
 /*# sourceMappingURL=styles.css.map */
