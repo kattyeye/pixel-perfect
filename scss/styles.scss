@@ -12,12 +12,16 @@ $nav-bar-color: #f8f8f8;
 body {
   margin: 0 auto;
   font-family: "Lato", sans-serif;
-  background-color: red;
+  background-color: $bg-color;
 
   // ^^ change to bg-color
 }
 img {
   width: 100%;
+}
+
+img:hover {
+  filter: brightness(80%);
 }
 
 h1,
@@ -50,33 +54,77 @@ h6 {
 }
 
 // nav bar
+
 header {
-  height: 60px;
+  height: 61px;
   display: flex;
   background-color: $nav-bar-color;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #eaeaea;
+}
+@media (max-width: 600px) {
+  header {
+    width: 100%;
+  }
 }
 .nav {
   width: 80%;
   display: flex;
-
   font-size: 14px;
 }
 
 .left-nav {
-  justify-content: flex-start;
+  position: absolute;
+  left: 10vw;
+  top: 25px;
+  display: flex;
+  margin-left: 6px;
+}
+.left-nav a {
+  padding-right: 25px;
+  font-size: 11px;
+  text-decoration: none;
+  color: #c0c0c0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.fa-chevron-down:before {
+  content: "\f078";
+  font-size: 8px;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+.left-nav a:hover {
+  color: $accent-text-color;
 }
 
 .right-nav {
   position: absolute;
   right: 10vw;
+  top: 25px;
+  display: flex;
 }
 .right-nav a {
+  display: flex;
   justify-content: flex-end;
-  padding: 5px;
+  padding-left: 14px;
+  text-decoration: none;
+  color: $icon-text-color;
+  font-size: 13px;
 }
 
+#search {
+  margin-left: 6px;
+  margin-right: 8px;
+  font-size: 12px;
+}
+.right-nav a:hover,
+#search:hover {
+  color: $accent-text-color;
+}
 // main
 
 main {
@@ -87,11 +135,19 @@ main {
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 52px;
-    margin-bottom: 60px;
+    margin-top: 51px;
+    margin-bottom: 30px;
     margin-left: 6px;
     //   padding-right: 20px;
     //   padding-left: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    display: block;
+    min-width: 1152px;
   }
 }
 
@@ -130,7 +186,6 @@ main {
   border-top: 0px;
   width: 100%;
 }
-// @media (min-width: 600px) {
 
 .info {
   line-height: 1.6em;
@@ -151,9 +206,53 @@ main {
   border: 1px solid $accent-text-color;
 }
 
+// .cont-button:hover {
+//   background-color: $accent-text-color;
+//   color: white;
+//   border: 1px solid white;
+// }
 .cont-button:hover {
-  color: blue;
-  border-color: blue;
+  background: linear-gradient(270deg, #d06a42, #7b381d);
+  background-size: 400% 400%;
+  color: white;
+
+  -webkit-animation: button 2s ease infinite;
+  -moz-animation: button 2s ease infinite;
+  animation: button 2s ease infinite;
+}
+
+@-webkit-keyframes button {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes button {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes button {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .bar {
@@ -172,7 +271,9 @@ main {
   margin-top: 10px;
   padding-top: 0;
 }
-
+#article-footer span {
+  padding-top: 8px;
+}
 span {
   padding-top: 10px;
   font-style: italic;
@@ -194,48 +295,20 @@ span {
 
   color: $icon-text-color;
 }
-
-.social-icons-container {
-  font-size: 12px;
-  padding-left: 46px;
-  width: 100%;
-  margin: 13px auto;
-  display: flex;
-  justify-content: flex-start;
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 9px;
-  }
-  a {
-    border: 1px solid #e4e4e4;
-    color: $icon-text-color;
-    border-radius: 50%;
-    text-decoration: none;
-
-    i {
-      height: 28px;
-      width: 28px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    i:before {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+.icons-footer a:hover {
+  color: $accent-text-color;
 }
 
+//entire side section
 aside {
   display: flex;
   flex-direction: column;
-  margin-top: 52px;
+  margin-top: 51px;
   width: 360px;
   margin-left: 30px;
 }
+
+//beyonce profile pic section
 .contentright {
   flex-direction: column;
   align-items: center;
@@ -278,6 +351,46 @@ aside {
   width: auto;
   display: block;
 }
+
+//social icons inside profile
+.social-icons-container {
+  font-size: 12px;
+  padding-left: 46px;
+  width: 100%;
+  margin: 13px auto;
+  display: flex;
+  justify-content: flex-start;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 9px;
+  }
+  a {
+    border: 1px solid #e4e4e4;
+    color: $icon-text-color;
+    border-radius: 50%;
+    text-decoration: none;
+
+    i {
+      height: 28px;
+      width: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    i:before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.social-icons-container a:hover {
+  color: #d06a42;
+}
+
 .name {
   margin-top: 12px;
   margin-bottom: 0;
@@ -285,9 +398,10 @@ aside {
   letter-spacing: 0.02em;
 }
 .profile-info {
-  line-height: 1.6em;
-  padding-top: 5px;
-  margin-bottom: 12px;
+  line-height: 1.7em;
+  padding-top: 7px;
+  margin-bottom: 11px;
+  font-size: 15px;
 }
 .profile-text {
   margin-top: -100px;
@@ -313,10 +427,12 @@ aside {
   align-items: center;
   display: flex;
   background-color: white;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   position: relative;
   border: 1px solid #eaeaea;
 }
+
+//popular posts section
 .popularposts {
   padding: 20px 15px;
   text-align: left;
@@ -326,6 +442,7 @@ aside {
   letter-spacing: 0.02em;
   text-align: center;
   padding-bottom: 12px;
+  margin-top: 13px;
 }
 
 .pop-post-img-sect {
@@ -376,6 +493,7 @@ h4 {
   margin-bottom: 20px;
 }
 
+// latest posts section
 .contentright3 {
   display: flex;
   flex-direction: row;
@@ -386,7 +504,7 @@ h4 {
 }
 
 .latestposts {
-  padding: 17px 29px 0px 29px;
+  padding: 19px 29px 0px 29px;
   text-align: left;
 }
 
@@ -397,7 +515,7 @@ h4 {
   padding-bottom: 12px;
   display: flex;
   justify-content: center;
-  padding-left: 44px;
+  padding-left: 12px;
 }
 
 .latest-post-name h2 {
@@ -405,7 +523,6 @@ h4 {
 }
 .latestpostcontainer {
   display: flex;
-  justify-content: center;
   padding-bottom: 16px;
   border-bottom: 1px solid #eaeaea;
   margin-top: 14px;
@@ -445,11 +562,13 @@ h4 {
 }
 .latestpostcontainer-last {
   display: flex;
-  justify-content: center;
+
   padding-bottom: 16px;
   margin-bottom: 18px;
   margin-top: 14px;
 }
+
+//instagram feed
 .contentright4 {
   display: flex;
   flex-direction: row;
@@ -460,27 +579,29 @@ h4 {
 }
 
 .insta-post-name {
+  margin-top: 13px;
   font-size: 18px;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-bottom: 12px;
+  padding-left: 6px;
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
+  margin-bottom: 26px;
 }
 .instagramposts {
-  padding: 20px 30px;
+  padding: 20px 20px;
+  margin-bottom: 12px;
 }
 
 .instapostcontainer {
-  margin-top: 12px;
+  margin-top: 8px;
   display: flex;
 }
 .insta-post-img-sect {
-  height: 145px;
+  height: 151px;
   width: 145px;
   padding: 0;
-  margin: 0;
+  margin: 2px 3px 2px 8px;
   display: flex;
 }
 
@@ -488,4 +609,38 @@ h4 {
   height: 100%;
   width: 100%;
   display: flex;
+}
+
+//pictures at bottom
+
+.picturesbottom-container {
+  display: flex;
+}
+.pictures-row {
+  display: flex;
+}
+
+.pictures-surround {
+  height: 188px;
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.img-bottom-single {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+//footer
+footer {
+  background-color: #222222;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $icon-text-color;
+  font-size: 14px;
 }
