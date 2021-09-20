@@ -332,6 +332,7 @@ aside {
   width: auto;
   display: block;
   margin-left: -50px;
+  cursor: pointer;
 }
 
 .social-icons-container {
@@ -416,6 +417,7 @@ aside {
 .popularposts {
   padding: 20px 15px;
   text-align: left;
+  cursor: pointer;
 }
 
 .pop-post-name {
@@ -511,6 +513,7 @@ h4 {
   padding-bottom: 16px;
   border-bottom: 1px solid #eaeaea;
   margin-top: 14px;
+  cursor: pointer;
 }
 
 .latest-post-img-sect {
@@ -586,6 +589,7 @@ h4 {
 .instapostcontainer {
   margin-top: 8px;
   display: flex;
+  cursor: pointer;
 }
 
 .insta-post-img-sect {
